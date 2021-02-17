@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1>Random word attempt #{{request.session.counter}}</h1>
+        <hr class="my-4">
+        <p class="lead">{{request.session.word}}</p>
+        <a href="/random_word/generate" class="btn btn-primary" role="button">Generate</a>
+        <a href="/random_word/reset" class="btn btn-danger" role="button">Reset</a>
+    </div>
+</body>
+</html>
